@@ -37,7 +37,7 @@ private int id;
     @Override
     public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
         this.game = stateBasedGame;
-        selectedMenuItem =0;
+        selectedMenuItem = 0;
     }
 
     @Override
@@ -103,8 +103,8 @@ private int id;
                 case 2: //Quit
                     if(GameSettings.DEBUG_MODE){
                         System.out.println("Quitting Game");
-                        gameContainer.exit();
                     }
+                    gameContainer.exit();
                     break;
             }
         }
