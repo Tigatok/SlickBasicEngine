@@ -12,7 +12,6 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 public class Game extends BasicGameState{
 private int id;
-
     public Game(int id){
 this.id =id;
     }

@@ -1,15 +1,12 @@
 package Game.MainMenu;
 
-import Game.Util.Colorize;
+import Game.Config.GameSettings;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.BasicGameState;
-import org.newdawn.slick.state.GameState;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.state.transition.FadeInTransition;
 import org.newdawn.slick.state.transition.FadeOutTransition;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Map;
 
 /**
@@ -91,14 +88,23 @@ private int id;
         else if( gameContainer.getInput().isKeyPressed(Input.KEY_ENTER)){
             switch(selectedMenuItem){
                 case 0: //Play Game
-                    System.out.println("Play Game Selected!");
+                    if(GameSettings.DEBUG_MODE) {
+                        System.out.println("Play Game Selected!");
+                    }
                     stateBasedGame.enterState(2, new FadeOutTransition(), new FadeInTransition());
                     break;
                 case 1: //Options
-                    //Config and shit.
+                    if(GameSettings.DEBUG_MODE){
+                        System.out.println("Options Selected!");
+                    }
+                    stateBasedGame.enterState(3);
                     break;
                 //Possibly add load?
                 case 2: //Quit
+                    if(GameSettings.DEBUG_MODE){
+                        System.out.println("Quitting Game");
+                        gameContainer.exit();
+                    }
                     break;
             }
         }
