@@ -17,22 +17,23 @@ public class Colorize {
     //&7 = orange
     //&r = reset = white
     private static String coloredString;
-    public static void Colorize(String stringToColorize, Graphics graphics, int x, int y){
+
+    public static void Colorize(String stringToColorize, Graphics graphics, int x, int y) {
         //We have a string with a bunch of color codes.
         String[] sectionToBeColored = stringToColorize.split("&");//    &1test &2Hello &Hi        //Grab frm the '& to the next &'
 
-        for(String sectionToColor : sectionToBeColored) {
+        for (String sectionToColor : sectionToBeColored) {
             if (!sectionToColor.equals("")) {
                 System.out.println("Color:" + sectionToColor);
-                String colorCode = sectionToColor.substring(0,1);
+                String colorCode = sectionToColor.substring(0, 1);
                 System.out.println("Colorcode: " + colorCode);
-            if(colorCode.equals("1")){
-                  coloredString += Color.white+sectionToColor;
-            } else if(colorCode.equals("2")){
-                coloredString += Color.black+sectionToColor;
-            } else if(colorCode.equals("3")){
-                coloredString +=Color.red+sectionToColor;
-            }
+                if (colorCode.equals("1")) {
+                    coloredString += Color.white + sectionToColor;
+                } else if (colorCode.equals("2")) {
+                    coloredString += Color.black + sectionToColor;
+                } else if (colorCode.equals("3")) {
+                    coloredString += Color.red + sectionToColor;
+                }
             }
         }
 

@@ -1,6 +1,5 @@
 package Game.Game;
 
-import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -10,10 +9,11 @@ import org.newdawn.slick.state.StateBasedGame;
 /**
  * Created by Tyler on 2/22/2015.
  */
-public class Game extends BasicGameState{
-private int id;
-    public Game(int id){
-this.id =id;
+public class Game extends BasicGameState {
+    private int id;
+
+    public Game(int id) {
+        this.id = id;
     }
 
     @Override

@@ -7,12 +7,13 @@ import Game.Config.GameSettings;
  */
 public class GameAPI {
     public static GameSettings gameSettings;
-    public GameAPI(){
+
+    public GameAPI() {
 
     }
 
-    public static  GameSettings getGameSettings(){
-        if(gameSettings == null){
+    public static GameSettings getGameSettings() {
+        if (gameSettings == null) {
             gameSettings = new GameSettings();
         }
         return gameSettings;

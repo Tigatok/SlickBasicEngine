@@ -1,10 +1,7 @@
 package Game.SplashScreen;
 
-import com.oracle.jrockit.jfr.Transition;
 import com.sun.media.jfxmedia.logging.Logger;
 import org.newdawn.slick.*;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.state.transition.FadeInTransition;
@@ -16,10 +13,10 @@ import java.util.Timer;
  * Created by Tyler on 2/22/2015.
  */
 public class SplashScreen extends BasicGameState {
+    public static int seconds;
     private Image splashScreenImage;
     private int id;
     private Timer splashScreenTimer;
-    public static int seconds;
     private int miliseconds = 0;
     private int time;
 
@@ -37,7 +34,7 @@ public class SplashScreen extends BasicGameState {
     @Override
     public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException {
         time += i;
-        if(time/1000 == 5 || gameContainer.getInput().isKeyPressed(Input.KEY_ENTER)){
+        if (time / 1000 == 5 || gameContainer.getInput().isKeyPressed(Input.KEY_ENTER)) {
             Logger.logMsg(0, "5 seconds has passed.");
             stateBasedGame.enterState(1, new FadeOutTransition(), new FadeInTransition());
         }
