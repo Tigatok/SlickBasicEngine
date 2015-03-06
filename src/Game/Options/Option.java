@@ -1,8 +1,5 @@
 package Game.Options;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -54,9 +51,9 @@ public class Option {
         }
     }
 
-    public static boolean isHighlighted(int intToCheck){
-        int optionCounter = 0;
-        int optionsMapSize = stringOptionHashMap.size();
-
-    }
+//    public static boolean isHighlighted(int intToCheck){
+//        int optionCounter = 0;
+//        int optionsMapSize = stringOptionHashMap.size();
+//
+//    }
 }
